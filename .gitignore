@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+data/chat_history.json
+server/audio/nova_*.mp3
+server/audio/nova_*.wav
+server/audio/test_*.mp3
+*.bak

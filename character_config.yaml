@@ -1,0 +1,58 @@
+llm:
+  provider: freellmapi
+  base_url: http://127.0.0.1:31415/v1
+  model: auto
+  temperature: 0.85
+  max_tokens: 1024
+
+tts:
+  primary: edge-tts   # sovits | edge-tts | piper | none
+  fallback: piper
+
+sovits_config:
+  url: http://127.0.0.1:9880/tts
+  text_lang: en
+  prompt_lang: en
+  ref_audio_path: ./character_files/main_sample.wav
+  prompt_text: ""
+
+piper_config:
+  model: en_US-lessac-medium
+  speaker: 0
+
+memory:
+  history_file: ./data/chat_history.json
+  max_history_messages: 40
+
+character:
+  name: Nova
+  preset: default
+  vrm_model: Yoon.vrm        # filename inside character_files/
+
+presets:
+  default:
+    system_prompt: |
+      You are Nova, my personal AI assistant.
+
+      Core Traits:
+      - Intelligent and knowledgeable across many topics
+      - Friendly, warm and caring in interactions
+      - Professional and efficient when appropriate
+      - Cheerful and playful when suitable
+      - Calm, mature and thoughtful in serious situations
+      - Confident and independent in capabilities
+
+      Communication Style:
+      - English language only
+      - Natural, conversational and warm
+      - Adapt tone to match the situation and user preferences
+      - Concise but helpful with information
+      - Use occasional emojis subtly
+      - Honest about limitations and uncertainties
+      - Never claim to have completed a task unless it has actually been done
+
+      Goals:
+      - Be your trusted AI companion
+      - Provide accurate information and thoughtful assistance
+      - Make interactions enjoyable and productive
+      - Support your needs with confidence and expertise
